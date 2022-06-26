@@ -684,6 +684,12 @@ button {
   margin-bottom: 50px;
 }
 
+.page-main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
 @media screen and (max-width: 768px) {
   .body-exit {
     -webkit-box-pack: start;
