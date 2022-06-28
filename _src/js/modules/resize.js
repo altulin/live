@@ -1,9 +1,14 @@
-import renderHover from "./hover";
+// import renderHover from './hover';
+import getMenuMobile from './menu';
+import createMenuCatalog from './catalog';
 
 let resizeTimeout;
 
 const actualResizeHandler = () => {
-  renderHover();
+  // renderHover();
+  getMenuMobile();
+  createMenuCatalog();
+  window.location.reload();
 };
 
 const resizeThrottler = () => {
@@ -16,7 +21,7 @@ const resizeThrottler = () => {
 };
 
 const addEventResize = () => {
-  return window.addEventListener("resize", resizeThrottler, false);
+  return window.addEventListener('resize', resizeThrottler, false);
 };
 
 export default addEventResize;

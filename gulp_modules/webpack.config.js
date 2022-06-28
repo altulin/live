@@ -1,8 +1,8 @@
-import UglifyJsPlugin from "uglifyjs-webpack-plugin";
+import UglifyJsPlugin from 'uglifyjs-webpack-plugin';
 
 const getConfig = (mode) => {
   return {
-    mode: "production",
+    mode: 'production',
     optimization: {
       minimize: mode,
       minimizer: [
@@ -21,8 +21,8 @@ const getConfig = (mode) => {
       rules: [
         {
           test: /\.js$/,
-          exclude: "/node_modules/",
-          loader: "babel-loader",
+          exclude: '/node_modules/',
+          loader: 'babel-loader',
         },
       ],
     },

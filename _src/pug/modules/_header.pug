@@ -1,5 +1,112 @@
 header.header#header
 	.header__inner.container.container--header
+		.header__top.header-top
+			a.header__logo.logo(href="/index.html" area-label="логотип")
+				+img-retina(`logo`, `jpg`, `логотип`, `logo__img`, `210`, `134`)
+				span.logo__text магазин инструмента
 
-		a.header__logo.logo(href="/index.html")
+			a.header-top__link.header-top__link--open(href="#header-nav")
+				span.header__link-text Открыть меню
+				+svg('hamburger-mob',41, 24,  'header__link-open')
+
+			a.header-top__link.header-top__link--tel(href="tel:+74957212525")
+				span 8 495 721-25-25
+				+svg('tel',35, 35,  '')
+
+
+			.header__block.header-block
+				.header-block__top.head
+					nav.head__nav.head-nav
+
+						each val in nav_top
+							a.head-nav__link(href="")= val
+
+						a.head-nav__link.head-nav__link--exit(href="#") Вход
+						a.head-nav__link.head-nav__link--reg(href="#") Регистрация
+
+						a.head-nav__link.head-nav__link--close(href="#header-nav")
+							span.header__link-text Закрыть меню
+								+svg(`menu-close`, 23, 23, `header__link-close`)
+
+
+
+
+					.head__user.head-user
+						a.head-user__link(href="#") Вход
+						a.head-user__link(href="#") Регистрация
+
+
+
+
+
+
+
+
+
+
+				.header-block__bottom.info
+					.figure.info__banner
+
+					ul.info__service.service
+						li.service__item
+							a.service__link.service__link--basket(href="#")
+								span.service__icon
+									+svg('basket', 19, 19, '')
+								span.service__text 3 шт. / 17 250 р.
+						li.service__item
+							a.service__link.service__link--wish(href="#")
+								span.service__icon
+									+svg('star', 14, 14, '')
+								span.service__text Избранное (7)
+						li.service__item
+							a.service__link.service__link--compare(href="#")
+								span.service__icon
+									+svg('balance', 18, 16, '')
+								span.service__text К сравнению (5)
+
+					.info-preview.preview
+						a.preview__item(href="#")
+							+img-retina(`drill_1`, `jpg`, `drill`, `preview__img`, `70`, `70`)
+
+						a.preview__item(href="#")
+							+img-retina(`drill_2`, `jpg`, `drill`, `preview__img`, `70`, `70`)
+
+						a.preview__item(href="#")
+							+img-retina(`drill_3`, `jpg`, `drill`, `preview__img`, `70`, `70`)
+
+
+
+					.info__location.location
+						.location__time.time
+							span.time__text Время работы
+							span.time__num 10.00-19.00
+
+						a.location__tel(href="tel:+74957212525") 8 495 721-25-25
+
+						.location__city.city
+							span.city__text Москва
+							a.city__change(href="/") сменить
+
+
+		.header__bottom.bottom-nav
+			.bottom-nav__main
+				form.bottom-nav__search.search(method='')
+					label.search__label(for="search-input")
+					input.search__input#search-input(type="text")
+					button.bottom-nav__btn(type="submit")
+						+svg('lupa', 19, 19, '')
+
+
+				.bottom-nav__wrap
+					nav.bottom-nav__list
+						.bottom-nav__list-inner
+							each val in nav_bottom
+								a.bottom-nav__link(href="")= val
+
+					button.bottom-nav__button(type="button") Каталог
+
+				a.bottom-nav__sale(href="") Распродажа
+
+
+
 			//- +img-retina(`logo`, `png`, `логотип`, `logo__img`, `145`, `46`)

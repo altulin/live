@@ -1,3 +1,30 @@
+@font-face {
+  src: url("/fonts/Roboto-Regular.woff2") format("woff2");
+  src: url("/fonts/Roboto-Regular.woff") format("woff");
+  font-family: Roboto;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/fonts/Roboto-Bold.woff2") format("woff2");
+  src: url("/fonts/Roboto-Bold.woff") format("woff");
+  font-family: Roboto;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  src: url("/fonts/HeliosCond-Bold.woff2") format("woff2");
+  src: url("/fonts/HeliosCond-Bold.woff") format("woff");
+  font-family: "HeliosCond";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
@@ -85,7 +112,7 @@ button {
   margin-left: auto;
   padding-right: 15px;
   padding-left: 15px;
-  max-width: 1350px;
+  max-width: 1200px;
 }
 
 .doc {
@@ -149,5 +176,11 @@ button {
 
 .doc hr + p {
   color: #90969e;
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=style-doc.css.map */

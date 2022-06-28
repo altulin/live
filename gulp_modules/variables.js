@@ -1,15 +1,15 @@
-import pluginsObject from "./plugins.js";
+import pluginsObject from './plugins.js';
 
 const projectName = `finance`; // название проекта
 const distFolder = `${projectName}_dist`; // Папка продакшн
-const distFolderZip = "*.zip";
+const distFolderZip = '*.zip';
 const srcFolder = `_src`; // Папка разработки
 
 const mode = pluginsObject.minimist(process.argv.slice(2))._[0];
 const assemblyWebpack = true; // webpack true or false
 const assemblyBabel = false; // babel true or false
 
-const cssFileList = ["", "-doc"];
+const cssFileList = ['', '-doc'];
 
 const plugunsJsUsed = [
   `jquery_js`,
@@ -17,7 +17,7 @@ const plugunsJsUsed = [
   // `slick_js`,
   // `locomotive_scroll`,
   // `ionRangesliderJs`,
-  // `mmenu_js`,
+  `mmenu_js`,
   // `jquery_modal_js`,
   // `glightbox_js`,
   // `inputmask_js`,
@@ -34,7 +34,7 @@ const plugunsCssUsed = [
     // `slick_css`,
     // `locomotive_scroll_css`,
     // "ionRangesliderCss",
-    // `mmenu_css`,
+    `mmenu_css`,
     // `jquery_modal_css`,
     // `glightbox_css`,
     // `swiper_css`,
@@ -115,8 +115,8 @@ const plugunsCss = new Map([
     `node_modules/locomotive-scroll/dist/locomotive-scroll.min.css`,
   ],
   [
-    "ionRangesliderCss",
-    "node_modules/ion-rangeslider/css/ion.rangeSlider.min.css",
+    'ionRangesliderCss',
+    'node_modules/ion-rangeslider/css/ion.rangeSlider.min.css',
   ],
 ]);
 
