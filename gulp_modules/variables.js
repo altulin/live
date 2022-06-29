@@ -1,6 +1,6 @@
 import pluginsObject from './plugins.js';
 
-const projectName = `finance`; // название проекта
+const projectName = `live`; // название проекта
 const distFolder = `${projectName}_dist`; // Папка продакшн
 const distFolderZip = '*.zip';
 const srcFolder = `_src`; // Папка разработки
